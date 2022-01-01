@@ -27,10 +27,12 @@ function quebrarLampada() {
     menssagem.textContent = 'A lampada esta quebrada, recarregue a pagina para concertar!'
     ascender.setAttribute('disabled', 'true')
     apagar.setAttribute('disabled', 'true')
-
-
 }
 
 ascender.addEventListener('click', ligarLampada)
 apagar.addEventListener('click', desligarLampada)
+
+img.addEventListener('mouseover', ligarLampada)
+img.addEventListener('mouseleave', desligarLampada)
+
 img.addEventListener('dblclick', quebrarLampada)
